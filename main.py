@@ -2,8 +2,8 @@ import requests
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTypes
 
-TELEGRAM_TOKEN = "TELEGRAM_BOT_TOKEN"
-OPENROUTER_API_KEY = "OPENROUTER_API_KEY"
+TELEGRAM_TOKEN = "8656316812:AAEfFrLFUsUXj2qxCy7IQYRVQCWl8iSVhpI"
+OPENROUTER_API_KEY = "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"
 
 async def chat(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
@@ -17,7 +17,7 @@ async def chat(update: Update, context: ContextTypes.DEFAULT_TYPE):
     }
 
     data = {
-        "model": "openai/gpt-4o-mini",
+        "model": "qwen/qwen3-coder:free",
         "messages": [
             {"role": "user", "content": user_message}
         ]
